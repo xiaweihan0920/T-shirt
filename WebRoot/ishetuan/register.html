@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>酷设注册</title>
+	<link href="/static/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="/static/css/layout.css">
+	<link rel="stylesheet" href="/static/css/format.css">
+	<script src="/static/js/jquery-2.1.1.min.js"></script>
+</head>
+<body class="special">
+	<div class="pg-header">
+		<div class="center-block pg-head">
+			<div class="pg-home">
+				<h1><a href="/">酷设</a></h1>
+			</div>
+			<div class="pg-btn">
+				<a href="/regis" class="link-active">注册</a>&nbsp;|&nbsp;
+				<a href="/login">登录</a>
+			</div>
+			<div class="pg-statu">
+				<div class="statu-bar bar-first">
+					<span class="statu-num">1</span>
+					<span class="statu-desc">开启你的酷设生活</span>
+				</div>
+				<div class="statu-line statu-line-1"></div>
+				<div class="statu-bar">
+					<span class="statu-num">2</span>
+					<span class="statu-desc">完善注册信息</span>
+				</div>
+				<div class="statu-line statu-line-2"></div>
+				<div class="statu-bar bar-last">
+					<span class="statu-num">3</span>
+					<span class="statu-desc">选择你的喜好</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container pg-content">
+		<!-- <div class="row">
+			<p class="col-sm-offset-2 col-sm-2 re-welcome">欢迎加入酷设</p>
+			<p class="col-sm-offset-5 re-login">已经注册？<a href="login.jsp">直接登录</a></p>
+		</div> -->
+		<div class="row center-block wrap-formContent">
+			<div class="col-sm-offset-2 col-sm-2 wrap-avatar">
+				<img src="/static/images/avatar.jpg" alt="头像">
+			</div>
+			<div class="col-sm-6 wrap-form">
+				<form action="/register" method="POST" class="form-horizontal">
+					<filedset>
+						<div class="form-group wrap-username">
+							<label for="username" class="col-sm-2 control-label">昵称</label>
+							<div class="col-sm-7">
+								<input type="text" class="form-control" name="username" id="username" >
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="email" class="col-sm-2 control-label">邮箱</label>
+							<div class="col-sm-7">
+								<input type="email" class="form-control" name="email" id="email" >
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="password" class="col-sm-2 control-label">密码</label>
+							<div class="col-sm-7">
+								<input type="password" class="form-control" name="password" id="password" >
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="pass-confirm" class="col-sm-2 control-label">确认密码</label>
+							<div class="col-sm-7">
+								<input type="password" class="form-control" name="pass-confirm" id="pass-confirm" placeholder="">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="security-code" class="col-sm-2 control-label">验证码</label>
+							<div class="col-sm-7">
+								<script type="text/javascript">
+                                    function refushcode(){
+       								 var d = new Date();
+        //为了避免服务器或者浏览器缓存，添加了一个额外的参数
+       								 document.getElementById("safecode").src="/img?t="+d.toString(40);
+   							 }
+  							    </script>
+ 
+							<img src="/img" alt="点击刷新" style="padding-top: 7px;" id="safecode" onclick="refushcode();"/>
+																
+								<input type="text" class="form-control" name="security-code" id="security-code">	
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-11">
+			      				<div class="checkbox">
+				       			 	<label>
+				          				<input type="checkbox"> 我已认真阅读并认同酷设服务条例
+				        			</label>
+			      				</div>
+			   			 	</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-11">
+						     	<button type="submit" class="btn btn-default">注册</button>
+						    </div>
+						</div>
+					</filedset>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="/static/js/formVail.js"></script>
+</body>
+</html>

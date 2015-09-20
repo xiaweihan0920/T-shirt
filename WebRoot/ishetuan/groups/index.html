@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<#include "/ishetuan/common/header.html"/>
+<body class="special spe-gr">
+	<#include "/ishetuan/common/section1.html"/>
+	<br><br><br><br><br><br>
+	<div class="container gr">
+		<div class="row gr-title">
+			<h2>全部小组话题</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-8 gr-main">
+				<#list topics.getList() as t>
+				<div class="gr-topic">			
+						<span class="gr-title"><a href="/groups/lookup/${t.id }">${t.title !}</a></span>		
+						<span class="gr-respTime">xxx回应&nbsp;&nbsp;x秒前</span>
+						<span class="belong">小组名：${t.groupname !}</span>
+				</div>
+				</#list>
+				<#include "/ishetuan/common/_paginate.html"/>
+	<@paginate currentPage=topics.pageNumber totalPage=topics.totalPage actionUrl="/groups/mygroups/" />
+			</div>
+			<div class="col-md-4 gr-side">
+				<div class="gr-avatar-wrap">
+					<img src="/static/images/avatar.jpg" alt="xxx" class="gr-avatar" />
+					<p><a href="/groups/mygroup">我的小组主页</a></p>
+					<p><a href="">发起(0)</a>&nbsp;|&nbsp;<a href="">回应(4)</a></p>
+				</div>
+				<div class="gr-create">
+					<a href="/groups/create" class="btn btn-info btn-lg" role="button">创建我的小组</a>
+				</div>
+				<div class="gr-joinList">
+					<div class="side-header clearfix">
+						<p class="pull-left">加入的小组</p>
+						<br/>
+						<table>
+							<#list groups.getList() as g>
+								<tr>
+									<td><img alt="avatar" src="${g.avatar !}"/></td>				
+									<td style="text-align:left;"><a href="/groups/ghome/${g.id !}">名字：${g.groupname}</a></td>
+								</tr>
+							</#list>
+						</table>
+						<a href="/groups/" class="pull-right">全部&gt;&gt;</a>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/static/js/nav.js"></script>
+</body>
+</html>

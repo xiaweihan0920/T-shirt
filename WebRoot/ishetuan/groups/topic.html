@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<#include "/ishetuan/common/header.html"/>
+  <body class="special spe-gr">
+  <#include "/ishetuan/common/section2.html">
+    <div class="container-fluid content">
+      <div class="row">
+        <div class="col-md-7 left">
+          <div class="tit">${topic.title !}
+          <#if session.user?? && session.user.id==topic.author_id>
+            <button class="btn btn-danger pull-right" style="margin-right: 10px">删帖</button>
+          </#if>
+          </div>
+          <div class="user-and-time">
+            <div class="profile"><img src="${topic.avatar}" class="img-circle" height="64" width="64" alt="头像"></div><span class="user">${topic.username!}</span><span class="time">${topic.in_time!}</span></div>
+          <div class="main-content">
+           	${topic.content }
+          </div>
+        </div>
+        <div class="col-md-4 col-md-offset-1 right">
+          <div class="team-sim-intro">
+            <div class="img">
+              <img src="/static/images/team-icon.png" height="60" width="60" alt="">
+            </div>
+            <div class="saying">
+              <p class="p1">一起来看动漫吧</p>
+              <p class="p2">(一个爱设计的孩纸)</p>
+            </div>
+          </div>
+          <div class="join-info">
+            <span class="numbers">1232人加入了这个小组</span>
+            <button type="button" class="btn btn-default btn-sm pull-right" disabled="disabled"><span style="color: gray;" class="glyphicon glyphicon-thumbs-up"></span>加入小组</button>
+            <span class="is-in-team" style="display: none">你已经是小组成员</span>
+          </div>
+          <div class="newest-theme">
+            <div class="tit">
+              <div class="pull-left">最新话题</div>
+              <div class="pull-right"><a href="#" title="more">more</a></div>
+              <div class="clear-fix"></div>
+            </div>
+            <div class="content-box">
+              <div class="topic-title-and-author">
+                <a href="#" class="topic-title">读书的16个境界</a>
+                <span class="topic-author">（爱读书的小胖）</span>
+              </div>
+              <div class="topic-title-and-author">
+                <a href="#" class="topic-title">读书的16个境界</a>
+                <span class="topic-author">（爱读书的小胖）</span>
+              </div>
+              <div class="topic-title-and-author">
+                <a href="#" class="topic-title">读书的16个境界</a>
+                <span class="topic-author">（爱读书的小胖）</span>
+              </div>
+              <div class="topic-title-and-author">
+                <a href="#" class="topic-title">读书的16个境界</a>
+                <span class="topic-author">（爱读书的小胖）</span>
+              </div>
+              <div class="topic-title-and-author">
+                <a href="#" class="topic-title">读书的16个境界</a>
+                <span class="topic-author">（爱读书的小胖）</span>
+              </div>
+              <div class="topic-title-and-author">
+                <a href="#" class="topic-title">读书的16个境界</a>
+                <span class="topic-author">（爱读书的小胖）</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7 inter-box">
+        
+          <div class="cont">
+          	<#list reply as reply>
+            <div class="row">
+              <div class="img-name-time">
+                <div class="col-md-1">
+                  <img src="${reply.avatar!}" height="40" width="40" class="img-circle">
+                </div>
+                <div class="col-md-4" style="background: #f0f6f3;color: black;font-size: 13px;">${reply.username!}</div>
+                <div class="time col-md-7" style="background: #f0f6f3;">${reply.in_time!}</div>
+              </div>
+              <div class="response-cont col-md-12">
+                <form class="col-md-offset-1" id="res-form">
+                  <div class="form-group">
+                    <p class="col-md-10">${reply.content!}</p>
+                    <#if session.user ?? >
+                    	<#if  session.user.id == reply.author_id>
+                    		<a href="/reply/delete?rid=${reply.id!}&tid=${topic.id!}">删除</a>
+                    	</#if>
+                    		<button type="button" class="btn btn-primary pull-right res-btn">回应</button>
+                    </#if>
+                    <div class="clear-fix"></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            </#list>    
+          </div>
+          <nav>
+            <button type="button" class="btn btn-success btn-sm col-md-1" id="res-to-post">回应</button>
+            <button type="button" class="btn btn-danger btn-sm col-md-1 col-md-offset-1">点赞<span class="glyphicon glyphicon-thumbs-up">+1</span></button>
+          </nav>
+        </div>
+        <div class="col-md-5"></div>
+     
+        <div class="col-md-7" style="padding-left: 0;">
+          <div class="add-to-list" style="padding-left: 0;padding-top: 10px;margin-left: 0;">
+          	<span><h3>我要回复</h3></span>
+           <form action="/reply/${topic.id!}" method="post" id="reply_form">
+           		<textarea class="form-control" id="content" name="content" cols="100" rows="5"></textarea>
+           		<input type="submit" value="提交">
+           </form>
+          </div>
+        </div>
+        </div>
+      </div>
+      <#include "/ishetuan/common/footer.html"/>
+      <script type="text/javascript" src="/static/js/jquery-2.1.3.min.js"></script>
+      <script type="text/javascript" src="/static/js/nav.js"></script>
+      <script type="text/javascript" src="/static/js/tog.js"></script>
+      <script src="http://js.nicedit.com/nicEdit-latest.js"></script>
+      <script type="text/javascript">
+      bkLib.onDomLoaded(function() {
+        new nicEditor().panelInstance('NicEdit');
+      });
+
+      </script>
+      <script type="text/javascript">
+      $(function() {  	
+    	$("#reply_form").submit(function(){
+    		 if($("#content").val()==""){
+    			alert("内容不能为空");
+    			return false;
+    		}
+    		return true;
+    	}); 
+        $('.res-btn,.to-res-btn').click(function() {
+          $('div.add-to-list').show();
+          $('.add-up').click(function() {
+            var cont = $(".add-to-list textarea").val();
+            cont = "选个好地方，选个好时辰";
+            // var html = '<div class="form-group"><p class = "add-cont"> ' + cont + ' </p> <button type="button" class = "btn btn-primary pull-right res-btn" onclick="$(\'div.add-to-list\').show();"> 回复 </button> <div class = "clear-fix"> </div> </div>';
+            var html = '<div class="row"> <div class="img-name-time"> <div class="col-md-1 col-md-offset-1"> <img src="../images/profile.png" height="40" width="40" class="img-circle"> </div> <div class="col-md-4">一个萌萌的果果</div> <div class="time">2015-5-10 20：13：44</div> </div> <div class="response-cont col-md-offset-1 col-md-11"> <form  id="res-form"> <div class="form-group"> <p class="col-md-offset-1 col-md-9">' + cont + '</p> <button type="button" class="btn btn-danger">删帖</button><button type="button" class="btn btn-primary pull-right res-btn" onclick="$(\'div.add-to-list\').show();">回应</button> <div class="clear-fix"></div> </div> </form> </div> </div>';
+            $('div.inter-box div.cont').append(html);
+            $('.add-to-list').hide();
+          });
+        });
+
+        $('#res-to-post').click(function() {
+          $('div.add-to-list').show();
+          $('.add-up').click(function() {
+            var cont = $(".add-to-list textarea").val();
+            
+            /* cont = "吃着火锅唱着歌儿"; */
+            var html = '<div class="row"> <div class="img-name-time"> <div class="col-md-1"> <img src="../images/profile.png" height="40" width="40" class="img-circle"> </div> <div class="col-md-4">一个萌萌的果果</div> <div class="time">2015-5-10 20：13：44</div> </div> <div class="response-cont col-md-12"> <form id="res-form" class="col-md-offset-1"> <div class="form-group"> <p class="col-md-10">' + cont + '</p> <button type="button" class="btn btn-danger">删帖</button><button type="button" class="btn btn-primary pull-right res-btn" onclick="$(\'div.add-to-list\').show();">回应</button> <div class="clear-fix"></div> </div> </form> </div> </div>';
+            $('div.inter-box div.cont').append(html);
+            $('.add-to-list').hide();
+          });
+        });
+        $('.add-up').click(function() {
+          var cont = $(".add-to-list textarea").val();
+          cont = "翻译翻译，什么叫惊喜？";
+          // alert(cont);
+          var html = '<div class="row"> <div class="img-name-time"> <div class="col-md-1"> <img src="../images/profile.png" height="40" width="40" class="img-circle"> </div> <div class="col-md-4">一个萌萌的果果</div> <div class="time">2015-5-10 20：13：44</div> </div> <div class="response-cont col-md-12"> <form class="col-md-offset-1" id="res-form"> <div class="form-group"> <p class="col-md-10">' + cont + '</p> <button type="button" class="btn btn-danger">删帖</button><button type="button" class="btn btn-primary pull-right res-btn" onclick="$(\'div.add-to-list\').show();">回应</button> <div class="clear-fix"></div> </div> </form> </div> </div>';
+          $('div.inter-box div.cont').append(html);
+          // $('.add-to-list').hide();
+        });
+      });
+
+      </script>
+  </body>
+</html>
+

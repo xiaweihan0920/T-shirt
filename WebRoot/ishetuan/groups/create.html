@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<#include "/ishetuan/common/header.html"/>
+<body class="special spe-gr">
+	<#include "/ishetuan/common/section.html"/>
+	<div class="container gr">
+		<div class="row gr-title">
+			<h2>申请创建小组</h2>
+		</div>
+		<div class="row gr-creaForm">
+			<form action="/groups/save" method="POST" class="form-horizontal" enctype="multipart/form-data">
+				<div class="form-group gr-control">
+					<label class="col-md-2 lab-odd">小组名称</label>
+					<div class="col-md-6">
+						<input type="text" name="groupname">
+					</div>	
+				</div>
+				<div class="form-group gr-control">
+					<label class="col-md-2 lab-even">小组类别</label>
+					<div class="col-md-6">
+						<select name="grouptype">
+							<option>足球</option>
+							<option>动漫</option>
+							<option>电影</option>
+							<option>Batman</option>
+							<option>Harry Potter</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group gr-lcontrol">
+					<label for="" class="col-md-2 lab-odd">小组权限</label>
+					<div class="col-md-6 limit-radio">
+						<div class="radio">
+							<label>
+								<input type="radio" name="limit" value="public" checked>					
+								任何人都可以加入
+							</label>
+						</div>
+						<div class="radio">
+							<label>
+								<input type="radio" name="limit" value="private">	
+								只有批准才能加入
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group gr-control">
+					<label class="col-md-2 lab-even">上传小组头像</label>
+					<div class="col-md-6">
+						<input type="file" name="avatar">
+					</div>	
+				</div>
+				<div class="form-group gr-control">
+					<label for="" class="col-md-2 lab-even">小组描述</label>
+					<div class="col-md-6">
+						<textarea name="gr-desc"></textarea>
+					</div>	
+				</div>
+				<div class="form-group">
+				    <div class="col-md-offset-2 col-md-10">
+				    	<button type="submit" class="btn btn-info bt-create" disabled="disabled">确定并创建</button>
+				    </div>
+			 	</div>
+			</form>
+		</div>
+	</div>
+	<script src="/ishetuan/scripts/nav.js"></script>
+	<script src="/ishetuan/scripts/formVail.js"></script>
+</body>
+</html>

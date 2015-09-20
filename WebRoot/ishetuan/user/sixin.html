@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head lang="zh-cn">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>私信系统</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/format.css">
+  </head>
+
+  <body class="special spe-gr">
+    <nav class="navbar navbar-default nav-islogin non-group">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">酷设联盟</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown nav-list">
+              <button href="#" class="dropdown-toggle btn btn-default nav-button" data-toggle="dropdown" aria-expanded="false">
+                分类
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu list" role="menu">
+                <li>
+                  <a href="category/home/home.php">动漫</a>
+                  <div class="nav-line"></div>
+                  <a href="">一级主题</a>
+                  <div class="nav-line"></div>
+                  <a href="">一级主题</a>
+                </li>
+                <li>
+                  <a href="#">一级主题</a>
+                  <div class="nav-line"></div>
+                  <a href="">一级主题</a>
+                  <div class="nav-line"></div>
+                  <a href="">一级主题</a>
+                </li>
+                <li>
+                  <a href="#">一级主题</a>
+                  <div class="nav-line"></div>
+                  <a href="">一级主题</a>
+                  <div class="nav-line"></div>
+                  <a href="">一级主题</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search">
+              <span class="input-group-btn">
+            <button class="btn btn-default" type="button">搜索</button>
+          </span>
+            </div>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="no-line">
+              <a href="">我的关注</a>
+            </li>
+            <li>
+              <div class="line"></div>
+            </li>
+            <li class="dropdown no-line">
+              <a href="javascript:void(0);" class="nav">消息</a>
+              <div class="arrow"></div>
+              <ul class="dropdown-menu nav-mess">
+                <li class="nav-icon">
+                  <ul class="nav nav-tabs">
+                    <li role="presentation" class="active icon-trends"><a href="#"><span class="glyphicon glyphicon-th-list"></span></a></li>
+                    <li role="presentation" class="icon-shop"><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                    <li role="presentation" class="icon-bell"><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
+                    <li role="presentation" class="icon-focu"><a href="#"><span class="glyphicon glyphicon-eye-open"></span></a></li>
+                  </ul>
+                </li>
+                <li class="nav-mess-content">
+                  <ul class="icon-trends mess-cur">
+                    <li>
+                      <a href="">某人</a>
+                      <span>发布了</span>
+                      <a href="">某T恤</a>
+                    </li>
+                    <li>
+                      <a href="">某人</a>
+                      <span>发布了</span>
+                      <a href="">某T恤</a>
+                    </li>
+                    <li>
+                      <a href="">某人</a>
+                      <span>发布了</span>
+                      <a href="">某T恤</a>
+                    </li>
+                    <li>
+                      <a href="">某人</a>
+                      <span>发布了</span>
+                      <a href="">某T恤</a>
+                    </li>
+                    <li>
+                      <a href="">某人</a>
+                      <span>发布了</span>
+                      <a href="">某T恤</a>
+                    </li>
+                  </ul>
+                  <ul class="icon-shop">
+                    <li>
+                      <a href="">某人</a>
+                      <span>预购了你的T恤</span>
+                      <a href="">某T恤</a>
+                    </li>
+                    <li>
+                      <a href="">某人</a>
+                      <span>预购了你收藏的T恤</span>
+                      <a href="">某T恤</a>
+                    </li>
+                    <li></li>
+                  </ul>
+                  <ul class="icon-bell">
+                    <li>
+                      <a href="">某人</a>
+                      <span>赞了你的T恤</span>
+                      <a href="">某T恤</a>
+                    </li>
+                    <li>
+                      <a href="">某人</a>
+                      <span>赞了你在</span>
+                      <a href="">某T恤</a>
+                      <span>下的评论</span>
+                    </li>
+                    <li>
+                      <a href="">某人</a>
+                      <span>回复了你在</span>
+                      <a href="">某T恤</a>
+                      <span>下的评论</span>
+                    </li>
+                  </ul>
+                  <ul class="icon-focu">
+                    <li>这些人最近关注了你：</li>
+                    <li>
+                      <img src="images/avatar.jpg" alt="" class="mess-ava">
+                      <p class="mess-name">某人</p>
+                      <p class="mess-sign">某评论</p>
+                    </li>
+                    <li>
+                      <img src="images/avatar.jpg" alt="" class="mess-ava">
+                      <p class="mess-name">某人</p>
+                      <p class="mess-sign">某评论</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="line"></div>
+            </li>
+            <li class="dropdown nav-account">
+              <a href="">
+                <img src="../images/avatar.jpg" alt="头像" class="nav-avatar" />
+                <span>&nbsp;&nbsp;我的酷设</span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a>
+                    <span class="glyphicon glyphicon-user"></span> 我的主页
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <span class="glyphicon glyphicon-envelope"></span> 站内信
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <span class="glyphicon glyphicon-cog"></span> 账号设置
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <span class="glyphicon glyphicon-off"></span> 退出账号
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-default group">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../group/group.html">设团小组</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="">精选</a>
+            </li>
+            <li>
+              <a href="">精选</a>
+            </li>
+            <li>
+              <a href="">精选</a>
+            </li>
+            <li>
+              <a href="">精选</a>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="小组、话题">
+              <span class="input-group-btn">
+            <button class="btn btn-default" type="button">搜索</button>
+          </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <main class="sixin-system">
+      <div class="container-fluid content">
+        <div class="row">
+          <div class="col-md-7 col-md-offset-1 left pro">
+            <div class="my-mes">
+              <span class="mes">我的私信</span>
+              <button type="button" class="btn btn-primary btn-sm pull-right" id="write-mes" data-toggle="modal" data-target="#Modal"><span class="glyphicon glyphicon-envelope"></span>写私信</button>
+              <div class="clear-fix"></div>
+            </div>
+            <div class="message-box">
+              <div class="mess-none">还没有人给你发私信，不如你主动一点，给神交已久的知友发一封问候私信吧:)
+              </div>
+              <div class="mess-list">
+                <div class="head"><img src="../images/head1.png" class="img-thumbnail" alt="" width="65px" height="65px"></div>
+                <div class="mes-two-sides">
+                  <div class="user"><span class="name">维国WSD</span>：<span class="res-con">嗯，我在呢。</span>
+                  </div>
+                  <div class="date-time"><span class="day">今天</span>&nbsp;<span class="time">17:35</span></div>
+                </div>
+                <div class="action"><span class="total">共2条对话</span><span class="ver-line">|</span><span class="res" data-toggle="modal" data-target="#Modal">回复</span><span class="ver-line">|</span><span class="jubao">举报</span><span class="ver-line">|</span><span class="del" data-toggle="modal" data-target="#Modal-del">删除</span></div>
+              </div>
+              <!-- <hr> -->
+              <div class="mess-list">
+                <div class="head"><img src="../images/head2.jpg" class="img-thumbnail" alt="" width="65px" height="65px"></div>
+                <div class="mes-two-sides">
+                  <div class="user">我发送给<span class="name">陈智仁</span>：<span class="res-con">nice to meet you too!</span>
+                  </div>
+                  <div class="date-time"><span class="day">昨天</span>&nbsp;<span class="time">17:35</span></div>
+                </div>
+                <div class="action"><span class="total">共3条对话</span><span class="ver-line">|</span><span class="res" data-toggle="modal" data-target="#Modal">回复</span><span class="ver-line">|</span><span class="jubao">举报</span><span class="ver-line">|</span><span class="del" data-toggle="modal" data-target="#Modal-del">删除</span></div>
+              </div>
+              <!-- <hr> -->
+              <div class="mess-list">
+                <div class="head"><img src="../images/head3.png" class="img-thumbnail" alt="" width="65px" height="65px"></div>
+                <div class="mes-two-sides">
+                  <div class="user"><span class="name">Eric</span>：<span class="res-con">What a funny story!</span>
+                  </div>
+                  <div class="date-time"><span class="day">4-25</span>&nbsp;<span class="time">17:35</span></div>
+                </div>
+                <div class="action"><span class="total">共4条对话</span><span class="ver-line">|</span><span class="res" data-toggle="modal" data-target="#Modal">回复</span><span class="ver-line">|</span><span class="jubao">举报</span><span class="ver-line">|</span><span class="del" data-toggle="modal" data-target="#Modal-del">删除</span></div>
+              </div>
+              <!-- <hr> -->
+              <div class="mess-list">
+                <div class="head"><img src="../images/head4.png" class="img-thumbnail" alt="" width="65px" height="65px"></div>
+                <div class="mes-two-sides">
+                  <div class="user">我发送给<span class="name">发现者</span>：<span class="res-con">This is a Test!!!</span>
+                  </div>
+                  <div class="date-time"><span class="day">4-23</span>&nbsp;<span class="time">17:04</span></div>
+                </div>
+                <div class="action"><span class="total">共6条对话</span><span class="ver-line">|</span><span class="res" data-toggle="modal" data-target="#Modal">回复</span><span class="ver-line">|</span><span class="jubao">举报</span><span class="ver-line">|</span><span class="del" data-toggle="modal" data-target="#Modal-del">删除</span></div>
+              </div>
+              <!-- <hr> -->
+              <div class="mess-list">
+                <div class="head"><img src="../images/head5.png" class="img-thumbnail" alt="" width="65px" height="65px"></div>
+                <div class="mes-two-sides">
+                  <div class="user"><span class="name">灰太狼</span>:<span class="res-con">我一定要捉到小羊！！！</span>
+                  </div>
+                  <div class="date-time"><span class="day">4-21</span>&nbsp;<span class="time">17:35</span></div>
+                </div>
+                <div class="action"><span class="total">共3条对话</span><span class="ver-line">|</span><span class="res" data-toggle="modal" data-target="#Modal">回复</span><span class="ver-line">|</span><span class="jubao">举报</span><span class="ver-line">|</span><span class="del" data-toggle="modal" data-target="#Modal-del">删除</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 col-md-offset-1 left mes-info list">
+            <div class="my-mes">
+              <div class="back">
+                <a href="#" aria-label="back">
+                  <span aria-hidden="true">&laquo;返回</span>
+                </a>
+              </div>
+              <span class="mes-to">发私信给<span class="to-name"></span>：</span>
+              <form>
+                <div class="form-group">
+                  <textarea class="form-control" rows="5" id="post-cont"></textarea>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-primary btn-lg" id="send">发送</button>
+                  <div class="clear-fix"></div>
+                </div>
+              </form>
+            </div>
+            <!-- <button type="button" class="btn btn-primary" id="write-mes" data-toggle="modal" data-target="#Modal">写私信</button> -->
+            <div class="message-box">
+              <!-- <div class="mess-none">还没有人给你发私信，不如你主动一点，给神交已久的知友发一封问候私信吧:)</div> -->
+              <div class="mess-list">
+                <div class="head"><img src="../images/head1.png" class="img-thumbnail" width="65px" height="65px" alt=""></div>
+                <div class="mes-two-sides">
+                  <div class="user"><span class="name">陈智仁</span>：<span class="res-con">nice to meet you!</span>
+                  </div>
+                  <div class="date-time"><span class="day">4-25</span>&nbsp;<span class="time">17:35</span></div>
+                </div>
+                <div class="action"><span class="res">回复</span><span class="ver-line">|</span><span class="jubao">举报</span><span class="ver-line">|</span><span class="del" data-toggle="modal" data-target="#Modal-del-detail">删除</span></div>
+                <!-- <div class="clear-fix"></div> -->
+              </div>
+              <!-- <hr> -->
+              <div class="mess-list">
+                <div class="head"><img src="../images/head2.jpg" class="img-thumbnail" width="65px" height="65px" alt=""></div>
+                <div class="mes-two-sides">
+                  <div class="user"><span class="name">我</span>：<span class="res-con">nice to meet you too!</span>
+                  </div>
+                  <div class="date-time"><span class="day">4-27</span>&nbsp;<span class="time">10:35</span></div>
+                </div>
+                <div class="action"><span class="res">回复</span><span class="ver-line">|</span><span class="jubao">举报</span><span class="ver-line">|</span><span class="del" data-toggle="modal" data-target="#Modal-del-detail">删除</span></div>
+              </div>
+              <!-- <hr> -->
+              <div class="mess-list">
+                <div class="head"><img src="../images/head1.png" class="img-thumbnail" width="65px" height="65px" alt=""></div>
+                <div class="mes-two-sides">
+                  <div class="user"><span class="name">陈智仁</span>：<span class="res-con">OK,finish the test！good!</span>
+                  </div>
+                  <div class="date-time"><span class="day">4-29</span>&nbsp;<span class="time">17:35</span></div>
+                </div>
+                <div class="action"><span class="res">回复</span><span class="ver-line">|</span><span class="jubao">举报</span><span class="ver-line">|</span><span class="del" data-toggle="modal" data-target="#Modal-del-detail">删除</span></div>
+              </div>
+              <!-- <hr> -->
+              <div class="mess-list">
+                <div class="head"><img src="../images/head2.jpg" class="img-thumbnail" width="65px" height="65px" alt=""></div>
+                <div class="mes-two-sides">
+                  <div class="user"><span class="name">我</span>：<span class="res-con">Hello,Can you hear me?</span>
+                  </div>
+                  <div class="date-time"><span class="day">今天</span>&nbsp;<span class="time">17:35</span></div>
+                </div>
+                <div class="action"><span class="res" data-toggle="modal" data-target="#Modal">回复</span><span class="ver-line">|</span><span class="jubao">举报</span><span class="ver-line">|</span><span class="del" data-toggle="modal" data-target="#Modal-del">删除</span></div>
+              </div>
+              <!-- <hr> -->
+              <div class="mess-list">
+                <div class="head"><img src="../images/head1.png" class="img-thumbnail" width="65px" height="65px" alt=""></div>
+                <div class="mes-two-sides">
+                  <div class="user"><span class="name">我</span>:<span class="res-con">吃过饭了没？一起吃个吧，啊哈哈</span>
+                  </div>
+                  <div class="date-time"><span class="day">昨天</span>&nbsp;<span class="time">11:35</span></div>
+                </div>
+                <div class="action"><span class="res" data-toggle="modal" data-target="#Modal">回复</span><span class="ver-line">|</span><span class="jubao">举报</span><span class="ver-line">|</span><span class="del" data-toggle="modal" data-target="#Modal-del">删除</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-md-offset-1 right">
+            <div class="fri-box">
+              担心骚扰？可以<span><a href="#">设置</a></span> 为「只允许我关注的人给我发私信」。
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <a href="#top" title="" class="pull-right">
+        <button id="back-top" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></button>
+      </a>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-2 footer-info">
+            <h5 class="title">关于我们</h5>
+            <div class="related-info">
+              <div class="col-md-6">
+                <p><a href="#">关于我们</a></p>
+                <p><a href="#">加入我们</a></p>
+                <p><a href="#">联系我们</a></p>
+                <p><a href="#">商务合作</a></p>
+              </div>
+              <div class="col-md-6">
+                <p><a href="#" title="帮助中心">帮助中心</a></p>
+                <p><a href="#" title="标签集合">标签集合</a></p>
+                <p><a href="#" title="收集工具">收集工具</a></p>
+                <p><a href="#" title="免责声明">免责声明</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 footer-info">
+            <h5 class="title">手机应用</h5>
+            <div class="related-info">
+              <div class="col-md-6">
+                <p><a href="#">关于我们</a></p>
+                <p><a href="#">加入我们</a></p>
+                <p><a href="#">联系我们</a></p>
+                <p><a href="#">商务合作</a></p>
+              </div>
+              <div class="col-md-6">
+                <p><a href="#" title="帮助中心">帮助中心</a></p>
+                <p><a href="#" title="标签集合">标签集合</a></p>
+                <p><a href="#" title="收集工具">收集工具</a></p>
+                <p><a href="#" title="免责声明">免责声明</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 footer-info">
+            <!-- <h5 class="title">二维码</h5> -->
+            <div class="related-info">
+              <img src="../images/erweima.jpg" height="100" width="100" alt="" class="img-rounded" style="margin-bottom: 10px">
+              <p>扫描二维码
+                <br>下载手机客户端</p>
+            </div>
+          </div>
+          <div class="col-md-2 footer-info">
+            <h5 class="title">关于我们</h5>
+            <div class="related-info">
+              <div class="col-md-6">
+                <p><a href="#">新浪微博</a></p>
+                <p><a href="#">QQ空间</a></p>
+                <p><a href="#">腾讯微博</a></p>
+                <p><a href="#">人人网</a></p>
+              </div>
+              <div class="col-md-6">
+                <p><a href="#" title="微信">微信</a></p>
+                <p><a href="#" title="豆瓣">豆瓣</a></p>
+                <p><a href="#" title="知乎">知乎</a></p>
+                <p><a href="#" title="36Kr">36Kr</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 footer-info">
+            <h5 class="title">友情链接</h5>
+            <div class="related-info">
+              <div class="col-md-6">
+                <p><a href="#">淘宝网</a></p>
+                <p><a href="#">天猫商城</a></p>
+                <p><a href="#">京东商城</a></p>
+                <p><a href="#">亚马逊</a></p>
+              </div>
+              <div class="col-md-6">
+                <p><a href="#" title="当当">当当</a></p>
+                <p><a href="#" title="易趣网">易趣网</a></p>
+                <p><a href="#" title="易迅网">易迅网</a></p>
+                <p><a href="#" title="蘑菇街">蘑菇街</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </footer>
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <span>&copy;Copyright 2015 <a href="#">酷设联盟</a></span> |
+            <span><a target="_blank" href="#">京ICP备11008151号</a></span> |
+            <span>京公网安备11010802014853</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog ui-widget-content" id="draggable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">发送私信</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">发给:</label>
+                <input type="text" class="form-control" id="recipient-name" placeholder="搜索用户">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="control-label">内容:</label>
+                <textarea class="form-control" id="message-text" cols="500"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-undo">取消</button>
+            <button type="button" class="btn btn-primary">发送</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="Modal-del">
+      <div class="modal-dialog ui-widget-content" id="draggable-del">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">删除私信会话</h4>
+          </div>
+          <div class="modal-body">
+            <p>你确定要删除与<span class="name"></span>的所有会话吗？&hellip;</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-undo">取消</button>
+            <button type="button" class="btn btn-primary">确认</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="Modal-del-detail">
+      <div class="modal-dialog ui-widget-content" id="draggable-del-detail">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">删除私信会话</h4>
+          </div>
+          <div class="modal-body">
+            <p>你确定要删除这条消息吗？</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-undo">取消</button>
+            <button type="button" class="btn btn-primary">确认</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <script type="text/javascript" src="../scripts/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/nav.js"></script>
+    <script type="text/javascript">
+    $(function() {
+      $('div.pro div.mess-list').each(function(index, el) {
+        // alert($(this).html());
+        if ($(this).html().indexOf('我发送给') >= 0) {
+          $(this).find('div.action').find('span.jubao,span.jubao+span.ver-line').remove();
+        }
+      });
+    });
+    </script>
+    <script type="text/javascript" src="../scripts/tog.js"></script>
+  </body>
+
+</html>

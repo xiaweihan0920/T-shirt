@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<#include "/ishetuan/common/header.html"/>
+<body class="special spe-gr">
+	<#include "/ishetuan/common/section2.html"/>
+	<div class="container gr">
+		<div class="row gr-title">
+			<h2>我的设团小组</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="nav nav-tabs gr-tabs">
+					<li class="gr-tabs-join active" role="presentation"><a href="#">加入的小组</a></li>
+					<li class="gr-tabs-publish" role="presentation"><a href="#">发帖</a></li>
+					<li class="gr-tabs-respond" role="presentation"><a href="#">回复</a></li>
+					<li class="gr-tabs-love" role="presentation"><a href="#">喜欢</a></li>
+				</ul>
+				<div class="gr-tab gr-join">
+					<#list groups as g>
+					<div class="gr-single">
+						<img alt="寻秦" src="${g.avatar}">
+						<p><a href="/groups/ghome/${g.id}">${g.groupname}</a></p>
+						<p><span class="glyphicon glyphicon-user"></span> <span>100人</span></p>
+					</div>
+					</#list>
+				</div>
+				<div class="gr-tab gr-respond">
+					<div class="gr-topic">
+						<span class="gr-title"><a href="">回应</a></span>
+						<span class="gr-respTime">xxx回应&nbsp;&nbsp;x秒前</span>
+						<span class="belong"><a href="">城南小组</a></span>
+					</div>
+					<div class="gr-topic">
+						<span class="gr-title"><a href="">长亭外,古道边,芳草碧连天。晚风拂柳笛声残,夕阳山外山啦啦啦</a></span>
+						<span class="gr-respTime">xxx回应&nbsp;&nbsp;x秒前</span>
+						<span class="belong"><a href="">送别小组</a></span>
+					</div>
+				</div>
+				<div class="gr-tab gr-publish">
+				<#list topics as t>
+					<div class="gr-topic">
+						<span class="gr-title"><a href="/groups/lookup/${t.id}">${t.title}</a></span>
+						<span class="gr-respTime">xxx回应&nbsp;&nbsp;x秒前</span>
+						<span class="belong"><a href="/groups/ghome/${t.gid}">${t.groupname}</a></span>
+					</div>
+				</#list>
+				</div>
+				<div class="gr-tab gr-love">
+					<div class="gr-topic">
+						<span class="gr-title"><a href="">love</a></span>
+						<span class="gr-respTime">xxx回应&nbsp;&nbsp;x秒前</span>
+						<span class="belong"><a href="">城南小组</a></span>
+					</div>
+					<div class="gr-topic">
+						<span class="gr-title"><a href="">长亭外,古道边,芳草碧连天。晚风拂柳笛声残,夕阳山外山啦啦啦</a></span>
+						<span class="gr-respTime">xxx回应&nbsp;&nbsp;x秒前</span>
+						<span class="belong"><a href="">送别小组</a></span>
+					</div>
+					<div class="gr-topic">
+						<span class="gr-title"><a href="">长亭外,古道边,芳草碧连天。晚风拂柳笛声残,夕阳山外山啦啦啦</a></span>
+						<span class="gr-respTime">xxx回应&nbsp;&nbsp;x秒前</span>
+						<span class="belong"><a href="">送别小组</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/static/js/nav.js"></script>
+	<script src="/static/js/gr_messege.js"></script>
+</body>
+</html>

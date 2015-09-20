@@ -1,0 +1,56 @@
+/*category/home/home.php*/
+.dir{
+	border: solid 1px #ebebeb;
+	background: #fff;
+	height: 70px;
+}
+.first,.sencond{
+	border-right: solid 1px #ebebeb;
+}
+.sencond{
+	height: 100%;
+}
+
+.curDir{
+	margin-top: 40px;
+	border-bottom: solid 1px #e3e4e5;
+}
+
+.wrap-show{
+	position: relative;
+	margin-top: 40px;
+}
+.show{
+	float: left;
+	width: 225px;
+	border: solid 1px #e3e4e5;
+	-webkit-box-shadow: #e3e4e5 0 5px;
+	box-shadow: #e3e4e5 0 5px;
+}
+.col_01{
+	left: 0;
+}
+.col_02{
+	left: 25%;
+}
+.col_03{
+	left: 50%;
+}
+.col_04{
+	left: 75%;
+}
+.show img{
+	width: 100%;
+	height: 100%;
+}
+
+.loading{
+	display: none;
+	width: 100%;
+	height: 20px;
+	background: url(../images/loading.gif) center no-repeat;
+}
+
+.page{
+	text-align: center;
+}

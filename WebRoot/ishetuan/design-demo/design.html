@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>酷设联盟</title>
+	<!--<link rel="stylesheet" href="bootstrap.min.css">-->
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">
+	<!-- <link rel="stylesheet" href="css/jquery-ui-1.11.3.css"> -->
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/format.css">
+	<script src="scripts/default.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top lg-nav">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">酷设联盟</a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown nav-list">
+						<button class="dropdown-toggle btn btn-default nav-button" data-toggle="dropdown" aria-expanded="false">
+							分类
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu list" role="menu">
+							<li>
+								<a href="category/home/home.php">动漫</a>
+								<div class="nav-line"></div>
+								<a href="">一级主题</a>
+								<div class="nav-line"></div>
+								<a href="">一级主题</a>
+							</li>
+							<li>
+								<a href="#">一级主题</a>
+								<div class="nav-line"></div>
+								<a href="">一级主题</a>
+								<div class="nav-line"></div>
+								<a href="">一级主题</a>
+							</li>
+							<li>
+								<a href="#">一级主题</a>
+								<div class="nav-line"></div>
+								<a href="">一级主题</a>
+								<div class="nav-line"></div>
+								<a href="">一级主题</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-left" role="search">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search">	
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">搜索</button>
+						</span>
+					</div>
+				</form>
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="">设团小组</a>
+					</li>
+					<li>
+						<a href="">我要设计</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<button type="button" class="btn btn-danger nav-reg">注册</button>
+					</li>
+					<li>
+						<a href="" class="nav nav-login">登录</a>
+					</li>
+					<li>
+						<p class="navbar-text">
+							关联账号登录：
+							<span>QQ</span>
+							<span>新浪微博</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<article class="row">
+			<section class="col-md-3 ds-upload">
+				<ul class="nav nav-tabs">
+					<li role="presentation">
+						<a href="">添加/上传图片</a>
+					</li>
+				</ul>
+				<div class="ds-btn-upload">
+					<button class="btn btn-info" id="ds-upload">
+						<span class="glyphicon glyphicon-open"></span>
+						上传图片
+					</button>
+					<input type="file" name="ds-form-upload" id="f-upload" class="f-upload">
+					<p class="ds-tip">
+						提示：为达到最佳效果，请上传高分辨率图片<br/>
+						最大：5M <br>
+						文件类型：jpg,png
+					</p>
+				</div>
+			</section>
+			<section class="col-md-6 ds-t">
+				<img src="images/t-prototype.jpg" alt="" class="t-prototype">			
+				<div class="ds-imgup-wrap">
+					<img src="" alt="插入图片的位置" class="ds-imgup">
+				</div>
+				<!-- google_ad_section_start(weight=ignore) -->			
+
+				<!--[if !IE]>			
+				<![IGNORE[-->			
+				<![IGNORE[]]>			
+				<canvas class="canvas" id="canvasBackground"></canvas>
+				<!--<![endif]-->			
+
+				<!--[if IE]>			
+				<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+        codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0"
+        width="220" height="330" id="bomomo" class="canvas" align="middle">
+					<param name="allowScriptAccess" value="sameDomain" />			
+					<param name="allowFullScreen" value="false" />			
+					<param name="movie" value="bomomo.swf" />			
+					<param name="quality" value="high" />			
+					<param name="bgcolor" value="#ffffff" />			
+					<embed src="bomomo.swf" quality="high" bgcolor="#ffffff" width="220" height="330" name="bomomo" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />			
+				</object>
+				<![endif]-->			
+
+				<!--[if !IE]>			
+				<![IGNORE[-->			
+				<![IGNORE[]]>			
+				<canvas class="canvas" id="canvasForeground"
+            onmousedown="handleMouseDown(event)" onmouseup="handleMouseUp(event)"
+            onmouseover="handleMouseIn(event)" onmouseout="handleMouseOut(event)"
+            onmousemove="handleMouseMoved(event)"
+        ></canvas>
+				<!--<![endif]-->			
+			</section>
+			<section class="col-md-3 ds-tools">
+				<div class="ds-tool">
+					<button class="btn btn-info" id="ds-save" title="保存到本地">
+						<span class="glyphicon glyphicon-floppy-save"></span>
+					</button>
+					<button class="btn btn-info" id="ds-new" title="新建">
+						<spanglyphicon class="glyphicon glyphicon-repeat"></spanglyphicon>
+					</button>
+				</div>
+				<div class="ds-bomomo ds-tool" id="tools">
+					<p>
+						<button class="btn btn-info">bomomo工具栏</button>&nbsp;&nbsp;&nbsp;thanks for
+						<a href="http://bomomo.com/">bobomo</a>
+					</p>
+					<span class="ds-button" id="button1" onclick="buttonClicked(1)" onmouseover="buttonOver(1)" onmouseout="buttonOut(1)">
+						<img src="images/button/1.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button2" onclick="buttonClicked(2)" onmouseover="buttonOver(2)" onmouseout="buttonOut(2)">
+						<img src="images/button/2.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button3" onclick="buttonClicked(3)" onmouseover="buttonOver(3)" onmouseout="buttonOut(3)">
+						<img src="images/button/3.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button4" onclick="buttonClicked(4)" onmouseover="buttonOver(4)" onmouseout="buttonOut(4)">
+						<img src="images/button/4.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button5" onclick="buttonClicked(5)" onmouseover="buttonOver(5)" onmouseout="buttonOut(5)">
+						<img src="images/button/5.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button6" onclick="buttonClicked(6)" onmouseover="buttonOver(6)" onmouseout="buttonOut(6)">
+						<img src="images/button/6.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button7" onclick="buttonClicked(7)" onmouseover="buttonOver(7)" onmouseout="buttonOut(7)">
+						<img src="images/button/7.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button8" onclick="buttonClicked(8)" onmouseover="buttonOver(8)" onmouseout="buttonOut(8)">
+						<img src="images/button/8.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button9" onclick="buttonClicked(9)" onmouseover="buttonOver(9)" onmouseout="buttonOut(9)">
+						<img src="images/button/9.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button10" onclick="buttonClicked(10)" onmouseover="buttonOver(10)" onmouseout="buttonOut(10)">
+						<img src="images/button/10.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button11" onclick="buttonClicked(11)" onmouseover="buttonOver(11)" onmouseout="buttonOut(11)">
+						<img src="images/button/11.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button12" onclick="buttonClicked(12)" onmouseover="buttonOver(12)" onmouseout="buttonOut(12)">
+						<img src="images/button/12.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button13" onclick="buttonClicked(13)" onmouseover="buttonOver(13)" onmouseout="buttonOut(13)">
+						<img src="images/button/13.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button14" onclick="buttonClicked(14)" onmouseover="buttonOver(14)" onmouseout="buttonOut(14)">
+						<img src="images/button/14.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button15" onclick="buttonClicked(15)" onmouseover="buttonOver(15)" onmouseout="buttonOut(15)">
+						<img src="images/button/15.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button16" onclick="buttonClicked(16)" onmouseover="buttonOver(16)" onmouseout="buttonOut(16)">
+						<img src="images/button/16.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button17" onclick="buttonClicked(17)" onmouseover="buttonOver(17)" onmouseout="buttonOut(17)">
+						<img src="images/button/17.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button18" onclick="buttonClicked(18)" onmouseover="buttonOver(18)" onmouseout="buttonOut(18)">
+						<img src="images/button/18.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button19" onclick="buttonClicked(19)" onmouseover="buttonOver(19)" onmouseout="buttonOut(19)">
+						<img src="images/button/19.png" alt="" />			
+					</span>
+					<span class="ds-button" id="button20" onclick="buttonClicked(20)" onmouseover="buttonOver(20)" onmouseout="buttonOut(20)">
+						<img src="images/button/20.png" alt="" />			
+					</span>
+				</div>
+				<div class="ds-tool">
+					<button class="btn btn-info" id="ds-extra" disabled>
+						<span class="glyphicon glyphicon-sort"></span>
+						<span class="toggleZ">将上传图片显示在下层</span>
+					</button>
+					<p class="ds-tip">
+						图片编辑可用功能：拖拽、缩放。<br/>
+						编辑图片时请将图片置于上层。<br/>
+						使用bomomo工具栏时请将图片置于下层。<br/>
+					</p>
+				</div>
+			</section>
+		</article>
+	</div>
+	<!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
+	<script src="jquery-2.1.1.min.js"></script>
+	<!-- // <script src="http://libs.baidu.com/jqueryui/1.8.22/jquery-ui.min.js "></script> -->
+	<script src="scripts/jquery-ui.min.js"></script>
+	<script src="scripts/ds.js"></script>
+</body>
+</html>

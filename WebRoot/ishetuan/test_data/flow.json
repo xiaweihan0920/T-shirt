@@ -1,0 +1,45 @@
+{
+	"imgs": [
+		{
+			"shirtId": "201505020111",
+			"shirtSrc": "../category/singleT.html",
+			"imgSrc": "../images/5.jpg",
+			"desc": "一万年太久"
+		},{
+			"shirtId": "201505020112",
+			"shirtSrc": "../category/singleT.html",
+			"imgSrc": "../images/5.jpg",
+			"desc": "一万年太久"
+		},{
+			"shirtId": "201505020113",
+			"shirtSrc": "../category/singleT.html",
+			"imgSrc": "../images/5.jpg",
+			"desc": "一万年太久"
+		},{
+			"shirtId": "201505020114",
+			"shirtSrc": "../category/singleT.html",
+			"imgSrc": "../images/5.jpg",
+			"desc": "一万年太久"
+		},{
+			"shirtId": "201505020115",
+			"shirtSrc": "../category/singleT.html",
+			"imgSrc": "../images/5.jpg",
+			"desc": "一万年太久"
+		},{
+			"shirtId": "201505020116",
+			"shirtSrc": "../category/singleT.html",
+			"imgSrc": "../images/5.jpg",
+			"desc": "一万年太久"
+		},{
+			"shirtId": "201505020117",
+			"shirtSrc": "../category/singleT.html",
+			"imgSrc": "../images/5.jpg",
+			"desc": "一万年太久"
+		},{
+			"shirtId": "201505020118",
+			"shirtSrc": "../category/singleT.html",
+			"imgSrc": "../images/5.jpg",
+			"desc": "一万年太久"
+		}
+	]
+}

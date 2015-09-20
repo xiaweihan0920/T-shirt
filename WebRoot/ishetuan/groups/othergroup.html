@@ -1,0 +1,74 @@
+<html>
+<#include "/ishetuan/common/header.html"/>
+<body class="special spe-gr">
+	<#include "/ishetuan/common/section2.html"/>
+	<div class="container gr">
+		<div class="row">
+			<h2>欢迎来到设团小组,${username!}</h2>
+		</div>
+		<div class="row pre-title-desc">
+			<p>加入一些小组来定制你的小组首页。我们为你推荐了一些，按分类选择你感兴趣的加入，试试看！</p>
+		</div>
+		<div class="row pre-tabs">
+			<div class="col-md-1 pre-tab-ani pre-curtab">
+				<p class="pre-tab">动漫</p>
+				<p class="pre-desc-tab">海贼王&nbsp;数码宝贝&nbsp;魁拔...</p>
+				<div class="out-tri"></div>
+				<div class="in-tri"></div>
+			</div>
+			<div class="col-md-1 pre-tab-game">
+				<p class="pre-tab">游戏</p>
+				<p class="pre-desc-tab">LOL&nbsp;DNF&nbsp;穿越火线...</p>
+			</div>
+			<div class="col-md-1 pre-tab-ani">
+				<p class="pre-tab">动漫</p>
+				<p class="pre-desc-tab">海贼王&nbsp;数码宝贝&nbsp;魁拔...</p>
+			</div>
+			<div class="col-md-1 pre-tab-game">
+				<p class="pre-tab">动漫</p>
+				<p class="pre-desc-tab">海贼王&nbsp;数码宝贝&nbsp;魁拔...</p>
+			</div>
+			<div class="col-md-1 pre-tab-game">
+				<p class="pre-tab">动漫</p>
+				<p class="pre-desc-tab">海贼王&nbsp;数码宝贝&nbsp;魁拔...</p>
+			</div>
+		</div>
+		<div class="clearfix row pre-list pre-list-cur pre-ani">
+			<#list groups as g>
+			<div class="pre-single">
+				<img src="${g.avatar!}" alt="驯龙记" data-groupId="groupId1"/>
+				<p><a href="/groups/ghome.html/${g.id!}">${g.groupname!}</a></p>
+				<p><span class="glyphicon glyphicon-user"></span> <span>${g.m_count!}</span></p>
+				<p class="pre-join">+加入小组</p>
+			</div>
+			</#list>
+		</div>
+		<div class="clearfix row pre-list pre-game">
+			<div class="pre-single">
+				<img src="/static/images/show2.jpg" alt="LOL" />
+				<p><a href="">LOL</a></p>
+				<p><span class="glyphicon glyphicon-user"></span> <span>100人</span></p>
+				<p class="pre-join">+加入小组</p>
+			</div>
+			<div class="pre-single">
+				<img src="/static/images/show2.jpg" alt="LOL" />
+				<p><a href="">LOL</a></p>
+				<p><span class="glyphicon glyphicon-user"></span> <span>100人</span></p>
+				<p class="pre-join">+加入小组</p>
+			</div>
+		</div>
+		<div class="row pre-stadata-groupId="groupId1"tu">
+			<p class="pull-left pre-joined">已加入<span class="pre-joined-num">0个小组</span></p>
+			<form action="/groups/mygroup" method="POST">
+				<input type="hidden" name="groupSelect" id="groupSelect">
+				<button class="btn btn-info pull-right" type="submit">进入我的小组</button>
+			</form>
+		
+			<a href="/groups/mygroups" class="btn btn-info" type="button">查看所有小组话题</a>
+		</div>
+	</div>
+	<script src="/static/js/jquery-2.1.1.min.js"></script>
+	<script src="/static/js/pregroup.js"></script>
+	<script src="/static/js/nav.js"></script>
+</body>
+</html>
