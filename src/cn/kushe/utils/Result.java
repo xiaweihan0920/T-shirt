@@ -1,9 +1,4 @@
 package cn.kushe.utils;
-
-
-/**
- * Created by liuyang on 15/4/4.
- */
 public class Result {
 
     private String code;
