@@ -10,9 +10,6 @@ import com.jfinal.aop.Before;
 import java.util.Date;
 import java.util.Random;
 
-/**
- * Created by liuyang on 15/4/2.
- */
 public class MissionController extends BaseController {
 
     // 每日登录后，点击领取积分，可用于发帖，回复等
