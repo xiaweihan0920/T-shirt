@@ -5,9 +5,6 @@ import com.jfinal.plugin.activerecord.Model;
 
 import java.util.Date;
 
-/**
- * Created by liuyang on 15/4/20.
- */
 public class Code extends Model<Code> {
     public final static Code me = new Code();
 
